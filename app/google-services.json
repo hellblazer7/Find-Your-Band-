@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "308310478685",
+    "firebase_url": "https://find-your-band-61b23-default-rtdb.firebaseio.com",
+    "project_id": "find-your-band-61b23",
+    "storage_bucket": "find-your-band-61b23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308310478685:android:31f7fc0875be9185f822b4",
+        "android_client_info": {
+          "package_name": "com.example.findyourband"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308310478685-1tu14u6uauo81beshjpv8praa018lioj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.findyourband",
+            "certificate_hash": "2c7bfdbd88fe86dcf526b9e74b93ff48b3900184"
+          }
+        },
+        {
+          "client_id": "308310478685-lk5uas2h9vupmlahed18qsffb0icsmht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFam_qhCfMG345I_WJBsJOY33WP0MGWh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308310478685-lk5uas2h9vupmlahed18qsffb0icsmht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
