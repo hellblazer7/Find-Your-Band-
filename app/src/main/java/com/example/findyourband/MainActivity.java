@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
             HelperClass user=snapshot.getValue(HelperClass.class);
-            fullname.setText(user.getFullname());
             }
 
             @Override

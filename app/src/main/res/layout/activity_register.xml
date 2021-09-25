@@ -34,7 +34,7 @@
             android:fontFamily="@font/schoolbell"
             android:text="Find Your Band!"
             android:textColor="#011CAF"
-            android:textSize="60dp" />
+            android:textSize="35sp" />
 
         <EditText
             android:id="@+id/fullname"
