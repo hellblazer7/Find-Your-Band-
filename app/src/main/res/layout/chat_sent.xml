@@ -21,7 +21,7 @@
             android:layout_alignParentEnd="true"
             android:textColor="@android:color/white"
             android:id="@+id/showmessage"
-            android:background="#00BCD4"
+            android:background="@drawable/rounded_corner_sent"
             android:layout_alignParentRight="true" />
 
         <TextView

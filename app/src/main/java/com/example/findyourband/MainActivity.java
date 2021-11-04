@@ -2,14 +2,18 @@ package com.example.findyourband;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -34,20 +38,35 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference reference;
     FirebaseUser firebaseUser;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fullname=findViewById(R.id.fullname_textview);
-        Button button=findViewById(R.id.logoutbutton);
-        button.setOnClickListener(new View.OnClickListener() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main_activity);
+        toolbar.inflateMenu(R.menu.options_menu);
+        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setSubtitleTextColor(Color.WHITE);
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+
             @Override
-            public void onClick(View v) {
-                mAuth=FirebaseAuth.getInstance();
-                mAuth.signOut();
-                finish();
+            public boolean onMenuItemClick(MenuItem item) {
+
+                if(item.getItemId()==R.id.log_out)
+                {
+                    mAuth=FirebaseAuth.getInstance();
+                    mAuth.signOut();
+                    finish();
+                    return true;
+                }
+                else if(item.getItemId()== R.id.search_for_users)
+                {
+                    return true;
+                }
+                return false;
             }
         });
+        fullname=findViewById(R.id.fullname_textview);
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         ViewPager viewPager=findViewById(R.id.view_Pager);
         ViewPagerAdapter viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
@@ -61,8 +80,7 @@ public class MainActivity extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-            HelperClass user=snapshot.getValue(HelperClass.class);
-            }
+            HelperClass user=snapshot.getValue(HelperClass.class);            }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

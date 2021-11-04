@@ -80,9 +80,6 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String text=MessageeditText.getText().toString();
-                if(!text.startsWith(" ")){
-                    MessageeditText.getText().insert(0," ");
-                }
             }
 
             @Override
@@ -95,7 +92,7 @@ public class ChatActivity extends AppCompatActivity {
             public void onClick(View v) {
                 message=MessageeditText.getText().toString();
                 sendmessagetorecipient(myid,recipientid,message);
-                MessageeditText.setText(" ");
+                MessageeditText.setText("");
             }
         });
 
@@ -146,6 +143,20 @@ public class ChatActivity extends AppCompatActivity {
 
                 }
             });
+        DatabaseReference reference2=FirebaseDatabase.getInstance().getReference("ChatsList").child(myid).child(recipientid);
+        reference1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(!snapshot.exists()){
+                    reference2.child("id").setValue(recipientid);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
     }
 

@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/Applications/FindYourBand/app/src/main/res/drawable/border.xml" value="0.13541666666666666" />
         <entry key="..\:/Applications/FindYourBand/app/src/main/res/drawable/edittextmessagebar.xml" value="0.1390625" />
+        <entry key="..\:/Applications/FindYourBand/app/src/main/res/drawable/rounded_corner.xml" value="0.12291666666666666" />
+        <entry key="..\:/Applications/FindYourBand/app/src/main/res/drawable/rounded_corner_recieved.xml" value="0.12291666666666666" />
+        <entry key="..\:/Applications/FindYourBand/app/src/main/res/drawable/rounded_corner_sent.xml" value="0.12291666666666666" />
         <entry key="..\:/Applications/FindYourBand/app/src/main/res/layout-v21/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Applications/FindYourBand/app/src/main/res/layout/activity_chat.xml" value="0.2" />
         <entry key="..\:/Applications/FindYourBand/app/src/main/res/layout/activity_existing_users.xml" value="0.12291666666666666" />
@@ -17,10 +20,13 @@
         <entry key="..\:/Applications/FindYourBand/app/src/main/res/layout/fragment_existing_users.xml" value="0.12291666666666666" />
         <entry key="..\:/Applications/FindYourBand/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
         <entry key="..\:/Applications/FindYourBand/app/src/main/res/layout/layoutforusersmallrep.xml" value="0.25416666666666665" />
+        <entry key="..\:/Applications/FindYourBand/app/src/main/res/layout/options_menu.xml" value="0.1" />
         <entry key="..\:/Applications/FindYourBand/app/src/main/res/menu/menu_signout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Applications/FindYourBand/app/src/main/res/menu/options_menu.xml" value="0.16" />
         <entry key="..\:/Applications/FindYourBand/app/src/main/res/mipmap-anydpi-v26/findyourband_launcher.xml" value="0.1175925925925926" />
         <entry key="..\:/Applications/FindYourBand/app/src/main/res/mipmap-anydpi-v26/findyourband_launcher_round.xml" value="0.1175925925925926" />
         <entry key="..\:/Applications/FindYourBand/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1175925925925926" />
+        <entry key="..\:/Applications/FindYourBand/app/src/main/res/xml/menu_options.xml" value="0.1" />
       </map>
     </option>
   </component>

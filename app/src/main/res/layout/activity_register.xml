@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -33,8 +33,17 @@
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/schoolbell"
             android:text="Find Your Band!"
-            android:textColor="#011CAF"
-            android:textSize="35sp" />
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Sign Up"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
 
         <EditText
             android:id="@+id/fullname"
@@ -84,7 +93,7 @@
             android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#011CAF"
+            android:backgroundTint="#FFC0CB"
             android:text="Register"
             android:textColor="@color/white" />
 
@@ -94,7 +103,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#CCCCCC"
             android:text="Already have an account? Login"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:layout_marginBottom="40dp"/>
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
