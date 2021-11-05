@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -56,11 +57,15 @@ public class MainActivity extends AppCompatActivity {
                 {
                     mAuth=FirebaseAuth.getInstance();
                     mAuth.signOut();
+                    Intent myIntent = new Intent(MainActivity.this, LoginActivity.class);
+                    MainActivity.this.startActivity(myIntent);
                     finish();
                     return true;
                 }
                 else if(item.getItemId()== R.id.search_for_users)
                 {
+                    Intent myIntent = new Intent(MainActivity.this, SearchActivity.class);
+                    MainActivity.this.startActivity(myIntent);
                     return true;
                 }
                 return false;
