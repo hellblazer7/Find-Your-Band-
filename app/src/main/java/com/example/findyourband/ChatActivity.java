@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -92,8 +93,13 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 message=MessageeditText.getText().toString();
-                sendmessagetorecipient(myid,recipientid,message);
-                MessageeditText.setText("");
+                if (message.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Message cannot be empty", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    sendmessagetorecipient(myid, recipientid, message);
+                    MessageeditText.setText("");
+                }
             }
         });
 
