@@ -75,15 +75,13 @@ android:layout_height="match_parent"
                 android:background="@drawable/edittextmessagebar" />
 
 
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="50dp"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:enabled="false"
-                android:backgroundTint="#011CAF"
                 android:id="@+id/sendmessage_button"
                 android:layout_margin="10dp"
-                android:text="SEND"
-                android:textColor="@color/white"/>
+                android:background="@drawable/send_button" />
 
         </LinearLayout>
 
